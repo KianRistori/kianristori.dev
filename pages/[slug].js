@@ -8,7 +8,7 @@ function Post({ data, content }) {
     <div>
       <h1 className="font-bold text-7xl mt-24 mb-12">{data.title}</h1>
       <time className="text-gray-500 italic">{data.date}</time>
-      <p className="dark:text-white prose mt-12">
+      <p className=" prose dark:prose-invert dark:text-white mt-12">
         <MDXRemote {...content} />
       </p>
     </div>

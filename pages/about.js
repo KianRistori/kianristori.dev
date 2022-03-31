@@ -6,9 +6,8 @@ export default function Home({ posts }) {
   return (
     <div>
       <Hero/>
-      <h1 className="mt-24 mb-12 font-bold text-4xl">Latest Posts</h1>
-      <div className="md:flex gap-5 pb-10">
-      {posts.slice(0,3).map((post) => (
+      <h1 className="mt-24 mb-12 font-bold text-4xl">About Posts</h1>
+      {posts.map((post) => (
         <PostCard
           key={post.slug}
           title={post.data.title}
@@ -17,10 +16,6 @@ export default function Home({ posts }) {
           slug={post.slug}
         />
       ))}
-      </div>
-      <a href="blog" className="text-gray-600 text-base">Read all posts</a>
-      <h1 className="mt-24 mb-12 font-bold text-4xl">About me</h1>
-      <p className="font-light text-gray-400">I'm Full Stack Web Developer based in Italy.</p>
     </div>
   );
 }
