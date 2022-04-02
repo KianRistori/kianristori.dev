@@ -1,31 +1,7 @@
-import PostCard from "../components/PostCard";
-import getPosts from "../helpers/getPosts";
-import Hero from "../components/Hero";
-
-export default function Home({ posts }) {
+export default function About({ posts }) {
   return (
     <div>
-      <Hero/>
-      <h1 className="mt-24 mb-12 font-bold text-4xl">About Posts</h1>
-      {posts.map((post) => (
-        <PostCard
-          key={post.slug}
-          title={post.data.title}
-          date={post.data.date}
-          description={post.data.description}
-          slug={post.slug}
-        />
-      ))}
+      <h1>About</h1>
     </div>
   );
 }
-
-export const getStaticProps = () => {
-  const posts = getPosts();
-
-  return {
-    props: {
-      posts,
-    },
-  };
-};

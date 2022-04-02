@@ -12,7 +12,7 @@ const Header = () => {
     if (currentTheme === "dark") {
       return (
         <button className="w-10 h-10 flex items-center rounded-md"  onClick={() => setTheme('light')}>
-          <SunIcon className="w-6 h-6 flex-1"  />
+          <SunIcon className="w-6 h-6 flex-1"/>
         </button>
         
       )
@@ -28,7 +28,7 @@ const Header = () => {
   };
   return (
     <div className="flex justify-between my-8 items-center">
-      <h1 className="font-medium text-xl"><a href="/">Kian</a></h1>
+      <h1 className="font-medium text-xl"><a href="/">Kian Ristori</a></h1>
       <div>
         <a
           href="https://github.com/KianRistori"

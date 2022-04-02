@@ -1,19 +1,20 @@
+import Head from "next/head"
 import PostCard from "../components/PostCard";
 import getPosts from "../helpers/getPosts";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
-import Gradient from 'rgt';
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 export default function Home({ posts }) {
   return (
     <div>
+      <Head>
+        <title>Kian Ristori</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Hero/>
-      <h1 className="mt-24 mb-12 font-bold text-4xl">
-        <Gradient dir="left-to-right" from="#A9C9FF" to="#FFBBEC" >
-          Latest Posts
-        </Gradient>
-      </h1>
-      <div className="pb-10">
+      <h1 className="mt-24 mb-12 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 text-4xl">Latest Posts</h1>
+      <div>
       {posts.slice(0,3).map((post) => (
         <PostCard
           key={post.slug}
@@ -25,8 +26,8 @@ export default function Home({ posts }) {
         />
       ))}
       </div>
-      <a href="blog" className="text-gray-600 text-base">Read all posts</a>
-      <h1 className="mt-24 mb-12 font-bold text-4xl">Skills</h1>
+      <a href="blog" className="text-gray-600 text-base flex">Read all posts<HiArrowNarrowRight className="ml-1 h-auto mt-0.5"/></a>
+      <h1 className="mt-24 mb-12 font-bold text-transparent bg-clip-text bg-gradient-to-br from-rose-400 to-orange-300 text-4xl">Skills</h1>
       <Skills/>
     </div>
   );
@@ -34,7 +35,6 @@ export default function Home({ posts }) {
 
 export const getStaticProps = () => {
   const posts = getPosts();
-
   return {
     props: {
       posts,
