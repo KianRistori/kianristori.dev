@@ -2,7 +2,7 @@ import Image from "next/image"
 
 function Hero() {
     return (
-        <div className="flex md:flex-row mt-5 sm:mt-20 mb-10 flex-col-reverse">
+        <div className="flex md:flex-row mt-10 md:mt-20 mb-10 flex-col-reverse">
             <div className="mr-20">
                 <h1 className="font-bold text-5xl mb-5 text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500">Hi, I'm Kian Ristori</h1>
                 <p className="font-light max-w-md text-gray-400">I'm Full Stack Web Developer based in Italy. Welcome to my blog</p>

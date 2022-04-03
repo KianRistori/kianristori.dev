@@ -8,10 +8,10 @@ function Post({ data, content, time }) {
   return (
     <div>
       <Head>
-        <title>{data.title}</title>
+        <titl2e>{data.title}</titl2e>
         <meta name="description" content={data.description}></meta>
       </Head>
-      <h1 className="font-bold text-7xl sm:mt-24 mt-4 mb-6">{data.title}</h1>
+      <h1 className="font-bold text-7xl md:mt-24 mt-10 mb-6">{data.title}</h1>
       <div className="flex justify-between">
         <time className="text-gray-500 italic">{data.date}</time>
         <p className="text-gray-500 italic">{time} min read</p>
