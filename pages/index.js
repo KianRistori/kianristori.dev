@@ -13,7 +13,7 @@ export default function Home({ posts }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Hero/>
-      <h1 className="mt-24 mb-12 font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 text-4xl">Latest Posts</h1>
+      <h1 className="md:mt-24 mb-12 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-200 via-purple-400 to-purple-800 text-4xl">Latest Posts</h1>
       <div>
       {posts.slice(0,3).map((post) => (
         <PostCard
@@ -27,7 +27,7 @@ export default function Home({ posts }) {
       ))}
       </div>
       <a href="blog" className="text-gray-600 text-base flex">Read all posts<HiArrowNarrowRight className="ml-1 h-auto mt-0.5"/></a>
-      <h1 className="mt-24 mb-12 font-bold text-transparent bg-clip-text bg-gradient-to-br from-rose-400 to-orange-300 text-4xl">Skills</h1>
+      <h1 className="md:mt-24 mt-10 mb-12 font-bold text-transparent bg-clip-text bg-gradient-to-br from-rose-400 to-orange-300 text-4xl">Skills</h1>
       <Skills/>
     </div>
   );

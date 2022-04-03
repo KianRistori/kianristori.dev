@@ -9,7 +9,7 @@ function Layout({ children }) {
       <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css" />
     </Head>
       <Navbar />
-      <main className="flex-1">{children}</main>
+        <main className="flex-1">{children}</main>
       <Footer />
       <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
     </div>
