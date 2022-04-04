@@ -11,7 +11,7 @@ function Hero() {
                 </a>
             </div>
             <div className="mb-10" >
-                <Image className="rounded-full" src="/logo.jpg" alt="profile-img" width={150} height={150}></Image>
+                <img className="rounded-full" src="/logo.jpg" alt="profile-img" width={150} height={150}></img>
             </div>
         </div>
     );
