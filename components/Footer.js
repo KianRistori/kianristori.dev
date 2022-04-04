@@ -34,7 +34,7 @@ function Footer() {
 </div>
 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"/>
 <div className="sm:flex sm:items-center sm:justify-between text-center">
-<span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com" className="hover:underline">Kian Ristori</a> Deploy with <a href="#">Vercel</a>
+<span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="/" className="hover:underline">Kian Ristori</a> ° Deploy with <a href="https://vercel.com/">Vercel</a>
 </span>
 <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0 justify-center">
 <a href="https://github.com/KianRistori" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">

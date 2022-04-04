@@ -8,7 +8,7 @@ function Post({ data, content, time }) {
   return (
     <div>
       <Head>
-        <titl2e>{data.title}</titl2e>
+        <title>{data.title}</title>
         <meta name="description" content={data.description}></meta>
       </Head>
       <h1 className="font-bold text-7xl md:mt-24 mt-10 mb-6">{data.title}</h1>

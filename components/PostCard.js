@@ -8,7 +8,7 @@ function PostCard({ title, date, description, image, slug, time }) {
           <div className="flex flex-col md:flex-row rounded-lg hover:dark:bg-gray-800 shadow-lg dark:shadow-gray-900">
             <img className="w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" src={image} alt="" />
             <div className="p-6 flex flex-col justify-start">
-            <h5 className="tracking-tight text-gray-900 dark:text-white text-2xl font-medium mb-2">{title}</h5>
+            <h3 className="tracking-tight text-gray-900 dark:text-white text-2xl font-medium mb-2">{title}</h3>
             <p className="font-normal text-gray-700 dark:text-gray-400 mb-4">{description}</p>
             <p className="font-normal text-gray-700 dark:text-gray-400 mb-4">{time}</p>
             <div>
