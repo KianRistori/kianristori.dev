@@ -16,8 +16,8 @@ export default function About() {
       <p className=" text-gray-500 mb-10">Radio Italia 5 Poppi Italy</p>
       <h3 className="font-bold text-xl mb-5">Headshots</h3>
       <div className="grid gap-5 grid-cols-2">
-        <img className="rounded-xl" src="/logo.jpg" width={300} alt="profile-picture"></img>
-        <img className="rounded-xl" src="/logo2.png" width={300} alt="profile-picture"></img>
+        <img className="rounded-xl" src="/logo.webp" width={300} alt="profile-picture"></img>
+        <img className="rounded-xl" src="/logo2.webp" width={300} alt="profile-picture"></img>
       </div>
     </div>
   );
