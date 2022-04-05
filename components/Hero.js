@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 function Hero() {
     return (
         <div className="flex md:flex-row mt-10 md:mt-20 mb-10 flex-col-reverse">
