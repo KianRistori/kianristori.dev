@@ -6,7 +6,11 @@ export default function About() {
       <Head>
         <title>About</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="description" content="About"/>
+        <meta name="description" content="About page"/>
+        <meta property="og:title" content="About Kian Ristori"/>
+        <meta property="og:description" content="About page"/>
+        <meta property="og:url" content="https://kianristori.dev/about"/>
+        <meta property="og:type" content="website"/>
       </Head>
       <h1 className="font-bold text-5xl mb-14 ">About Me</h1>
       <h2 className="font-bold text-2xl mb-5">Bio</h2>
