@@ -13,7 +13,6 @@ function Post({ data, content, time }) {
         <meta name="description" content={data.description}></meta>
         <meta property="og:title" content={data.time}/>
         <meta property="og:description" content={data.description}/>
-        <meta property="og:url" content={"https://kianristori.dev/"+{slug}}/>
         <meta property="og:type" content="website"/>
       </Head>
       <h1 className="font-bold text-7xl md:mt-24 mt-10 mb-6">{data.title}</h1>
