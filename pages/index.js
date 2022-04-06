@@ -14,7 +14,6 @@ export default function Home({ posts }) {
         <meta name="description" content="I'm Full Stack Web Developer based in Italy. Welcome to my blog"/>
         <meta property="og:title" content="Kian Ristori"/>
         <meta property="og:description" content="I'm Full Stack Web Developer based in Italy. Welcome to my blog"/>
-        <meta property="og:url" content="https://kianristori.dev"/>
         <meta property="og:type" content="website"/>
       </Head>
       <Hero/>

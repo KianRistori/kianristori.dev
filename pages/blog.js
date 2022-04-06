@@ -10,7 +10,6 @@ export default function Blog({ posts }) {
         <meta name="description" content="Welcome to my blog"/>
         <meta property="og:title" content="Blog Kian Ristori"/>
         <meta property="og:description" content="Welcome to my blog"/>
-        <meta property="og:url" content="https://kianristori.dev/blog"/>
         <meta property="og:type" content="website"/>
       </Head>
       <h1 className="md:mt-20 mt-10 mb-6 font-bold text-5xl">Blog</h1>
