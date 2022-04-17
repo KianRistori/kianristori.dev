@@ -1,8 +1,6 @@
 import {useTheme} from "next-themes"
 import {SunIcon, MoonIcon} from "@heroicons/react/solid"
 import { useState } from "react";
-import { GrMenu } from "react-icons/gr";
-import { GrClose } from "react-icons/gr";
 
 const Navbar = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -15,7 +13,7 @@ const Navbar = () => {
       if (currentTheme === "dark") {
         return (
             <button aria-label="sun-icon" className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" onClick={() => setTheme('light')}>
-              <SunIcon className="w-6 h-auto"/>
+              <SunIcon className="w-6"/>
             </button>
           
         )
