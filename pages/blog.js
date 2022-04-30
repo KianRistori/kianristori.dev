@@ -13,7 +13,7 @@ export default function Blog({ posts }) {
         <meta property="og:type" content="website"/>
       </Head>
       <h1 className="md:mt-20 mt-10 mb-6 font-bold text-5xl">Blog</h1>
-      <p className="font-ligh text-gray-400 mb-10">Welcome to my blog page. Here you can find lot of things of coding and so on</p>
+      <p className="font-ligh text-gray-400 mb-10">Welcome to my blog page. Here you can find lot of things about coding and of me.</p>
       {posts.map((post) => (
         <PostCard
           key={post.slug}
