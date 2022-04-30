@@ -11,7 +11,7 @@ export default function About() {
         <meta property="og:description" content="About page"/>
         <meta property="og:type" content="website"/>
       </Head>
-      <h1 className="font-bold text-5xl mb-14 ">About Me</h1>
+      <h1 className="font-bold text-5xl mt-10 mb-14 ">About Me</h1>
       <h2 className="font-bold text-2xl mb-5">Bio</h2>
       <h3 className="font-bold text-xl mb-5">Education</h3>
       <p className=" text-gray-500 mb-10">I.S.I.S Enirco Fermi Bibbiena Italy</p>
