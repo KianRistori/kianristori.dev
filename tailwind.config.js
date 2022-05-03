@@ -5,10 +5,14 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    extend: {
+      fontFamily: {
+        IBM: ["IBM Plex Sans", "sans-serif"]
+      }
+    }
   },
   
   plugins: [
-    require("@tailwindcss/typography"),
+    require("@tailwindcss/typography")
   ],
-  
 };

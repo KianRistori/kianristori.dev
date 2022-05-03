@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const getPost = (slug) => {
-  const fileContents = fs.readFileSync(path.join(`data/posts/${slug}.mdx`), "utf8");
+const getProject = (slug) => {
+  const fileContents = fs.readFileSync(path.join(`data/projects/${slug}.mdx`), "utf8");
   const { data, content } = matter(fileContents);
   return {
     data,
@@ -11,4 +11,4 @@ const getPost = (slug) => {
   };
 };
 
-export default getPost;
+export default getProject;

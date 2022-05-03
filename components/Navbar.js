@@ -21,6 +21,9 @@ const Navbar = () => {
              <a href="/blog" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
            </li>
            <li>
+             <a href="/projects" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+           </li>
+           <li>
              <a href="/about" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
            </li>
          </ul>
@@ -34,6 +37,27 @@ const Navbar = () => {
            </li>
            <li>
              <a href="/blog" class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0 dark:text-white">Blog</a>
+           </li>
+           <li>
+             <a href="/projects" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+           </li>
+           <li>
+             <a href="/about" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+           </li>
+         </ul>
+        )
+      }
+      if (router.pathname==="/projects") {
+        return(
+         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+           <li>
+             <a href="/" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+           </li>
+           <li>
+             <a href="/blog" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+           </li>
+           <li>
+             <a href="/projects" class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0 dark:text-white">Projects</a>
            </li>
            <li>
              <a href="/about" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
@@ -51,6 +75,9 @@ const Navbar = () => {
              <a href="/blog" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
            </li>
            <li>
+             <a href="/projects" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+           </li>
+           <li>
              <a href="/about" class="block py-2 pr-4 pl-3 text-black rounded md:bg-transparent md:p-0 dark:text-white">About</a>
            </li>
          </ul>
@@ -64,6 +91,9 @@ const Navbar = () => {
           <li>
             <a href="/blog" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0  md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
           </li>
+          <li>
+             <a href="/projects" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects</a>
+           </li>
           <li>
             <a href="/about" class="block py-2 pr-4 pl-3 text-gray-700 hover:text-gray-800 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
           </li>

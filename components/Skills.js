@@ -10,7 +10,6 @@ import { DiNpm } from "react-icons/di";
 import { DiDatabase } from "react-icons/di";
 import { DiMongodb } from "react-icons/di";
 import { DiPython } from "react-icons/di";
-import { DiHeroku } from "react-icons/di";
 
 function Skills() {
     return (
@@ -50,9 +49,6 @@ function Skills() {
             </button>
             <button type="button" className="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
                 <h1 className="flex space-x-1"><DiPython className="h-auto text-2xl"/><h1>Python</h1></h1>
-            </button>
-            <button type="button" className="text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">
-                <h1 className="flex space-x-1"><DiHeroku className="h-auto text-2xl"/><h1>Heroku</h1></h1>
             </button>
         </div>
     );

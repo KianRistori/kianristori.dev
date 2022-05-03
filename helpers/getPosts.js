@@ -3,20 +3,20 @@ import path from "path";
 import matter from "gray-matter";
 
 const getPosts = () => {
-  const files = fs.readdirSync(path.join("posts"));
+  const files = fs.readdirSync(path.join("data/posts"));
   const allPostsData = files.map((fileName) => {
     const slug = fileName.replace(".mdx", "");
     const fileContents = fs.readFileSync(
-      path.join(`posts/${slug}.mdx`),
+      path.join(`data/posts/${slug}.mdx`),
       "utf8"
     );
     const { data } = matter(fileContents);
     return {
       slug,
-      data,
+      data
     };
   });
-  allPostsData.sort((a,b)=> (new Date(a.data.date) < new Date(b.data.date)) ? 1 : -1)
+  allPostsData.sort((a,b)=> (new Date(a.data.date) < new Date(b.data.date)) ? 1 : -1);
   return allPostsData;
 };
 
