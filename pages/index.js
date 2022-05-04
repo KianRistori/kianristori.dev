@@ -42,6 +42,7 @@ export default function Home({ posts, projects }) {
           key={project.slug}
           title={project.data.title}
           description={project.data.description}
+          logo={project.data.logo}
           image={project.data.image}
           github={project.data.github}
           slug={project.slug}
