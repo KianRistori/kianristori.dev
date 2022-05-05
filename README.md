@@ -26,7 +26,7 @@
 
 ```bash
 $ git clone https://github.com/KianRistori/kianristori.dev.git
-$ cd leerob.io
+$ cd kianristori.dev
 $ npm install
 $ npm run dev
 ```
