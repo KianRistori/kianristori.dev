@@ -15,7 +15,7 @@ function Project({ data, content}) {
       </Head>
       <h1 className="font-bold text-7xl md:mt-24 mt-10 mb-6">{data.title}</h1>
       <img className="w-max rounded-xl mt-10" src={data.image} alt={data.image}></img>
-      <p className="prose dark:prose-invert dark:text-white mt-12">
+      <p className="prose dark:prose-invert mt-12 max-w-none">
         <MDXRemote lazy="true" {...content} />
       </p>
     </div>
