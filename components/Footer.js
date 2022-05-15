@@ -22,9 +22,6 @@ function Footer() {
 <li className="mb-4">
 <a href="/blog" className="hover:underline">Blog</a>
 </li>
-<li className="mb-4">
-<a href="/projects" className="hover:underline">Projects</a>
-</li>
 <li>
 <a href="/about" className="hover:underline">About</a>
 </li>
