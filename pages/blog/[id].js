@@ -25,7 +25,7 @@ function Post({ data, content, time, slug }) {
         </div>
       </div>
       <img className="w-max rounded-xl mt-10" src={data.image} alt={data.image}></img>
-      <p className="prose dark:prose-invert mt-12 max-w-none ">
+      <p className="prose dark:prose-invert dark:text-white mt-12">
         <MDXRemote lazy="true" {...content} />
       </p>
     </div>
