@@ -16,7 +16,7 @@ function Post({ data, content, time, slug }) {
         <meta name="description" content={data.description}></meta>
         <meta property="og:description" content={data.description}/>
       </Head>
-      <h1 className="font-bold text-7xl md:mt-24 mt-10 mb-6">{data.title}</h1>
+      <h1 className="font-bold text-4xl md:text-7xl md:mt-24 mt-10 mb-6">{data.title}</h1>
       <div className="flex justify-between">
         <time className="text-gray-500 italic">{data.date}</time>
         <div className="flex space-x-5">

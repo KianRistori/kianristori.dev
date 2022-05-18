@@ -6,7 +6,7 @@ import { useState } from "react";
 export default function Blog({ posts }) {
 
   const [searchValue, setSearchValue] = useState('');
-  const filterBlogPost = posts.filter((post) => 
+  const filterBlogPost = posts.filter((post) =>
     post.data.title.toLowerCase().includes(searchValue.toLowerCase())
   );
 
