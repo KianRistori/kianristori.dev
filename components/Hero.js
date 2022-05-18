@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function Hero() {
     return (
         <div className="flex md:flex-row mt-10 md:mt-20 mb-10 flex-col-reverse">
@@ -9,7 +11,7 @@ function Hero() {
                 </a>
             </div>
             <div className="mb-10" >
-                <img className="rounded-full" src="/logo.webp" alt="profile-img" width={150} height={150}></img>
+                <Image className="rounded-full" src="/logo.webp" alt="profile-img" width={150} height={150}></Image>
             </div>
         </div>
     );
