@@ -1,13 +1,15 @@
-import { MDXRemote } from "next-mdx-remote";
+// import { MDXRemote } from "next-mdx-remote";
 import getPost from "/helpers/getPost";
 import getPosts from "/helpers/getPosts";
-import { serialize } from "next-mdx-remote/serialize";
+import markdownToHtml from "../../lib/markdown";
+// import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head"
 import { BiTime } from "react-icons/bi";
 import ViewCounter from "/components/ViewCounter";
 import {AiFillEye} from "react-icons/ai";
 
 function Post({ data, content, time, slug }) {
+  const theme = 'tomorrow';
   return (
     <div>
       <Head>
@@ -15,6 +17,15 @@ function Post({ data, content, time, slug }) {
         <meta property="og:title" content={data.title}/>
         <meta name="description" content={data.description}></meta>
         <meta property="og:description" content={data.description}/>
+        <link
+          rel="preload"
+          href="https://unpkg.com/prismjs@0.0.1/themes/prism-tomorrow.css"
+          as="script"
+        />
+        <link
+          href={`https://unpkg.com/prismjs@0.0.1/themes/prism-${theme}.css`}
+          rel="stylesheet"
+        />
       </Head>
       <h1 className="font-bold text-4xl md:text-7xl md:mt-24 mt-10 mb-6">{data.title}</h1>
       <div className="flex justify-between">
@@ -26,7 +37,8 @@ function Post({ data, content, time, slug }) {
       </div>
       <img className="w-max rounded-xl mt-10" src={data.image} alt={data.image}></img>
       <p className="prose dark:prose-invert mt-12 max-w-none">
-        <MDXRemote lazy="true" {...content} />
+        {/* <MDXRemote lazy="true" {...content} /> */}
+        <article dangerouslySetInnerHTML={{__html: content}}></article>
       </p>
     </div>
   );
@@ -45,7 +57,8 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const post = await getPost(params.id);
-  const mdxSource = await serialize(post.content);
+  // const mdxSource = await serialize(post.content);
+  const mdxSource = await markdownToHtml(post.content);
   const readTime = getWordCount(post.content)/200;
   return {
     props: {
