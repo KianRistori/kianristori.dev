@@ -5,7 +5,7 @@ function PostCard({ title, description, logo, github, slug }) {
     <div class="md:max-w-sm w-full rounded-lg border-2 border-gray-400 shadow-2xl dark:border-gray-500 ">
       <div class="flex justify-end w-full px-4 pt-8">
         <div class="flex flex-col w-full items-center pb-10">
-            <img class="mb-3 w-24 h-24 shadow-lg object-cover rounded-lg" src={logo} alt="Project Image"/>
+            <img class="mb-3 w-24 h-24 object-cover rounded-lg" src={logo} alt="Project Image"/>
             <h5 class="mb-1 text-xl font-medium text-gray-900 dark:text-white">{title}</h5>
             <span class="text-sm text-center text-gray-500 dark:text-gray-400">{description}</span>
             <div class="flex mt-4 space-x-3 lg:mt-6">
