@@ -2,7 +2,6 @@ import { DiHtml5 } from "react-icons/di";
 import { DiCss3Full } from "react-icons/di";
 import { DiBootstrap } from "react-icons/di";
 import { DiJavascript1 } from "react-icons/di";
-import { DiJqueryLogo } from "react-icons/di";
 import { DiReact } from "react-icons/di";
 import { DiGit } from "react-icons/di";
 import { DiNodejsSmall } from "react-icons/di";
@@ -10,6 +9,8 @@ import { DiNpm } from "react-icons/di";
 import { DiDatabase } from "react-icons/di";
 import { DiMongodb } from "react-icons/di";
 import { DiPython } from "react-icons/di";
+import { SiCsharp } from "react-icons/si";
+import { SiVercel } from "react-icons/si";
 
 function Skills() {
     return (
@@ -19,9 +20,6 @@ function Skills() {
             </button>
             <button type="button" className="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
                 <h1 className="flex space-x-1"><DiCss3Full className="h-auto text-2xl"/><h1>CSS</h1></h1>
-            </button>
-            <button type="button" className="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">
-                <h1 className="flex space-x-1"><DiJqueryLogo className="h-auto text-2xl"/><h1>jQuery</h1></h1>
             </button>
             <button type="button" className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
                 <h1 className="flex space-x-1"><DiGit className="h-auto text-2xl"/><h1>Git</h1></h1>
@@ -49,6 +47,12 @@ function Skills() {
             </button>
             <button type="button" className="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900">
                 <h1 className="flex space-x-1"><DiPython className="h-auto text-2xl"/><h1>Python</h1></h1>
+            </button>
+            <button type="button" className="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                <h1 className="flex space-x-1"><SiCsharp className="h-auto text-xl"/><h1>C#</h1></h1>
+            </button>
+            <button type="button" className="text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-base px-5 py-2.5 text-center mr-2 mb-2 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">
+                <h1 className="flex space-x-1"><SiVercel className="h-auto text-xl"/><h1>Vercel</h1></h1>
             </button>
         </div>
     );
