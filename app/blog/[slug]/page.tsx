@@ -24,7 +24,9 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 		image,
 		slug,
 	} = post;
-	const ogImage = `https://kianristori.dev/api/og?title=${(title.replace(/ /g,"%20"))}`;
+	const ogImage = image
+	? `https://kianristori.dev${image}`
+	: `https://kianristori.dev/api/og?title=${(title.replace(/ /g,"%20"))}`;
 
 	return {
 		title,
@@ -37,7 +39,9 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 			url: `https://kianristori.dev/blog/${slug}`,
 			images: [
 				{
-					url: ogImage
+					url: ogImage,
+					width: 1600,
+					height: 836,
 				},
 			],
 		},
