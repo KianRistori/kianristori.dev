@@ -23,6 +23,6 @@ export default function ViewCounter({ slug, blogPage = false }) {
     }
   }, [slug])
 
-  return `${views > 0 ? views.toLocaleString() : '–––'} views`
+  return `${views > 0 ? views.toLocaleString() : ''} views`
 }
 
