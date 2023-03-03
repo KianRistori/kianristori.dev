@@ -1,0 +1,130 @@
+---
+title: How I created this Website
+publishedAt: '2022-05-3'
+summary: 'I tried to explain how I created this Website from scratch'
+---
+# To Start
+
+## NextJS
+
+### Why NextJS?
+[Next.js](https://nextjs.org/) is an open-source web development framework built on top of **Node.js** enabling **React** based web applications functionalities such as server-side rendering and generating static websites.
+
+It's used to build a complete web application with **React** from scratch.
+
+### The firts step is create the NextJS App
+
+```console
+npx create-next-app@latest name-app
+```
+
+Now you have create the new directory called **name-app**. Move into it:
+
+```console
+cd name-app
+```
+
+To run the app following this command:
+
+```console
+npm run dev
+```
+
+Let’s check to see if it’s working. Open [localhost:3000](http://localhost:3000/) from your browser.
+
+### Welcome to NextJS
+
+### Editing the Page
+
+Now you can edit the page of website starting from the **index.js**, and change everything **HTML** code
+
+## Tailwind CSS
+
+For the styling of website I have use [TailwindCSS](https://tailwindcss.com/) a utility-first CSS framework packed with classes. To install follow this comand:
+
+```console
+npm install -D tailwindcss
+npx tailwindcss init
+```
+
+This code create the file *tailwind.config.js*, add the paths to all of your template files in your tailwind.config.js file.
+
+```javascript
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Add the **@tailwind** directives for each of Tailwind’s layers to your *./styles/globals.css* file.
+
+```javascript
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Now you can start using Tailwind’s utility classes to style your content.
+
+```javascript
+export default function Home() {
+  return (
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
+  )
+}
+```
+
+## MDX
+
+[MDX](https://mdxjs.com/) is a superset of markdown that lets you write JSX directly in your markdown files. It is a powerful way to add dynamic interactivity, and embed components within your content, helping you to bring your pages to life.
+
+Next.js supports MDX through a number of different means, this page will outline some of the ways you can begin integrating MDX into your Next.js project.
+
+Setup `@next/mdx` in NextJS following this code
+
+```console
+npm install @next/mdx @mdx-js/loader
+```
+
+In your *next.config.js* copy this code to use MDX
+
+```javascript
+const withMDX = require('@next/mdx')({
+  extension: /\.mdx?$/,
+  options: {
+    remarkPlugins: [],
+    rehypePlugins: [],
+  },
+})
+module.exports = withMDX({
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+})
+```
+
+Create a new MDX page within the `/pages` directory:
+
+```console
+- /pages
+  - my-mdx-page.mdx
+- package.json
+```
+
+Now you can use the markdown in the file **.mdx**
+
+## Deploy
+
+To deploy my website I have used [Vercel](https://vercel.com/), I have connected my Github repository and Vercel host my website.
+
+## Custom Domain
+
+For the domain I have used [Namecheap](https://www.namecheap.com/), in Vercel I have take the DNS and in Namecheap I have added it, waiting few minutes for the Vercel controll. If Vercel pass the control your website have a custom domain.
+
+

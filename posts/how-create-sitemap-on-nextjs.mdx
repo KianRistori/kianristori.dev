@@ -1,0 +1,55 @@
+---
+title: 'How create Sitemap on NextJS'
+publishedAt: '2023-02-04'
+summary: 'How to create a sitemap for a NextJS blog to improve SEO, including installing the next-sitemap package, adding a command to the package.json file, and adding the site URL to the .env file.'
+---
+## Some new stuff
+
+**Hey everyone!** Recently, I've made some changes to this blog. On May 18, 2022, I implemented some new features, such as **highlighting** and **animations** in the Hero section, as well as a new About Me page with a Timeline of my important milestones.
+
+However, I had forgotten something really important for Google SEO: the **Sitemap**. So, I researched some tutorials to implement it, but with no success.
+
+So I’m here to do (hopefully) a great tutorial on How create sitemap on NextJS, in my case for a blog to index the post.
+
+### Install ****next-sitemap****
+
+The first step is to install [next-sitemap](https://www.npmjs.com/package/next-sitemap#installation) using the command:
+
+```
+npm i next-sitemap
+```
+
+Once complete, create a basic configuration file in the root of your project. Ensure the file is named `next-sitemap.config.js`. Copy the following code into the file:
+
+```js title="next-sitemap.config.js" showLineNumbers
+/** @type {import('next-sitemap').IConfig} */
+module.exports = {
+  siteUrl: process.env.SITE_URL
+  generateRobotsTxt: true,
+}
+```
+
+### Building
+
+Now in your `package.json` add this command under the **********build********** script:
+
+```json title="package.json" {2}
+{
+  "build": "next build",
+  "postbuild": "next-sitemap"
+}
+```
+
+### Env file
+
+Now, in your `.env` file, add your `SITE_URL` variable. Ensure that you include the full domain name in the `SITE_URL`, as Google Search Console requires the absolute domain. For example:
+
+```bash title=".env" {1}
+SITE_URL=https://www.kianristori.dev/
+```
+
+With this, Google Search Console works well. You can now view your sitemap at `domain/sitemap.xml` and add it to Google Search Console to improve your SEO.
+
+Bye for now!
+
+**Kian**

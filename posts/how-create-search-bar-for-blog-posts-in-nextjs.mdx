@@ -1,0 +1,137 @@
+---
+title: 'How create a Search Bar for Blog Posts in NextJS'
+publishedAt: '2022-05-18'
+summary: 'A little guide to create a Search Bar for your NextJS Blog Posts'
+---
+In this article, I will show you how to recreate a simple Search Bar for your NextJS Blog Posts like this.
+
+At first, you have to take your MDX file from the folder. You can use this code:
+
+```javascript
+// getPosts.js
+
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+
+const getPosts = () => {
+  const files = fs.readdirSync(path.join("data/posts"));
+  const allPostsData = files.map((fileName) => {
+    const slug = fileName.replace(".mdx", "");
+    const fileContents = fs.readFileSync(
+      path.join(`data/posts/${slug}.mdx`),
+      "utf8"
+    );
+    const { data } = matter(fileContents);
+    return {
+      slug,
+      data
+    };
+  });
+  allPostsData.sort((a,b)=> (new Date(a.data.date) < new Date(b.data.date)) ? 1 : -1);
+  return allPostsData;
+};
+
+export default getPosts;
+```
+
+I have added in the code a script that automatic order posts in base of the date, from most recent.
+
+`allPostsData.sort((a,b)=> (new Date(a.data.date) < new Date(b.data.date)) ? 1 : -1);`
+
+In my case, I take my file from *data/posts* folder. This is my Three:
+
+```json
+📦data
+ ┣ 📂posts
+ ┃ ┣ 📜how-I-create-this-website.mdx
+ ┃ ┣ 📜how-create-search-bar-for-blog-posts-in-nextjs.mdx
+ ┃ ┗ 📜welcome-to-my-blog.mdx
+```
+
+Now in your **Blog** page you have to show your Posts, you can take that use the function write before `getPosts`. Under your js file, put this function:
+
+```javascript
+export const getStaticProps = () => {
+  const posts = getPosts();
+  return {
+    props: {
+      posts,
+    },
+  };
+};
+```
+
+That return your **staticProps**, in this case the blog posts. Now in your export function, add these posts:
+```javascript
+export default function Blog({ posts }) {
+  //code here
+}
+```
+
+At this point, you can show your blog posts. In my case I used a *compontent* called **PostCard** to styled posts, to show the post you can use `map`function in JS, like this:
+
+```javascript
+{posts.map((post) => (
+  <PostCard
+    key={post.slug}
+    title={post.data.title}
+    date={post.data.date}
+    description={post.data.description}
+    image={post.data.image}
+    slug={post.slug}
+  />
+))}
+```
+
+The values *key*, *title*, *date* ... are taken from the MDX file in the "Header". File example:
+
+
+```markdown
+---
+title: 'How create a Search Bar for Blog Posts in NextJS'
+date: 'May 17 2022'
+description: 'A little guide to create a Search Bar for your NextJS Blog Posts'
+image: 'https://res.cloudinary.com/dk8lnfjpm/image/upload/v1652806442/charlesdeluvio-LPTVnfARdfs-unsplash_thdeq7.jpg'
+---
+In this article, I will show you how to recreate a simple Search Bar for your NextJS Blog Posts like this...
+```
+
+Now you can show your posts in Blog page.
+
+At this point is turn to `filter` that posts to create the **Search Bar**, to start import in your JS file `useState`from React. Now create a new Hook called **searchValue**:
+```javascript
+const [searchValue, setSearchValue] = useState('');
+```
+You used the function `setSearchValue` in the **input** HTML element on the event `onChange`:
+```javascript
+<input
+  aria-label="Search articles"
+  type="text"
+  onChange={(e) => setSearchValue(e.target.value)}
+  placeholder="Search articles"
+/>
+```
+Now you have the filter parameter, is time to write the function that filter your blog posts, write this under the Hook write before:
+```javascript
+const filterBlogPost = posts.filter((post) =>
+  post.data.title.toLowerCase().includes(searchValue.toLowerCase())
+);
+```
+
+Now change the `map` function write before with the `filterBlogPost`:
+
+```javascript
+{filterBlogPost.map((post) => (
+  <PostCard
+    key={post.slug}
+    title={post.data.title}
+    date={post.data.date}
+    description={post.data.description}
+    image={post.data.image}
+    slug={post.slug}
+  />
+))}
+```
+
+Now you have **done**. Customize your Search Bar component like you want, but remember in **input** element the event `onChange` with the function `filterBlogPost`.
