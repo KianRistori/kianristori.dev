@@ -21,8 +21,8 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 		title,
 		publishedAt: publishedTime,
 		summary: description,
-		slug,
 		image,
+		slug,
 	} = post;
 	const ogImage = image
 	? `https://kianristori.dev${image}`
@@ -33,6 +33,7 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 		description,
 		openGraph: {
 			title,
+			description,
 			type: 'article',
 			publishedTime,
 			url: `https://kianristori.dev/blog/${slug}`,
