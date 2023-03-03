@@ -26,7 +26,7 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 	} = post;
 	const ogImage = image
 	? `https://kianristori.dev${image}`
-	: `https://kianristori.dev/api/og?title=${title}`;
+	: `https://kianristori.dev/api/og?title=${(title.replace(/ /g,"%20"))}`;
 
 	return {
 		title,
