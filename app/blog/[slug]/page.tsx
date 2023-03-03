@@ -42,7 +42,13 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 					url: ogImage
 				},
 			],
-		}
+		},
+		twitter: {
+			card: 'summary_large_image',
+			title,
+			description,
+			images: [ogImage],
+		},
 	};
 }
 
