@@ -3,8 +3,8 @@ export default function ProjectCard({title, description, topics, link, linkPage}
 		<div className="grid w-full p-6 bg-white border border-gray-200 rounded-lg shadow-md dark:bg-transparent dark:border-gray-700">
 			<h2 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">{title}</h2>
 			<div className="flex flex-wrap">
-			{topics.map((topic) =>
-			(topic != "portfolio" ? <span className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 mb-2">{topic}</span> : null)
+			{topics.map((topic, i) =>
+			(topic != "portfolio" ? <span key={i} className="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300 mb-2">{topic}</span> : null)
 			)}
 			</div>
 			<p className="mb-4 font-normal text-gray-500 dark:text-gray-400">{description}</p>
