@@ -42,7 +42,7 @@ export default async function handler(req: NextRequest) {
             whiteSpace: 'pre-wrap',
           }}
         >
-			{postTitle}
+			{postTitle.replace(" ", "%20")}
         </div>
       </div>
     ),
