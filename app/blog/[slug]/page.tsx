@@ -39,7 +39,9 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 			url: `https://kianristori.dev/blog/${slug}`,
 			images: [
 				{
-					url: ogImage
+					url: ogImage,
+					width: 1200,
+					height: 627,
 				},
 			],
 		},
