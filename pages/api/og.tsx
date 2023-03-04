@@ -34,7 +34,7 @@ export default async function handler(req: NextRequest) {
             marginRight: 185,
             display: 'flex',
             fontSize: 130,
-            fontFamily: 'Arial',
+            fontFamily: 'Epilogue',
             letterSpacing: '-0.02em',
             fontStyle: 'normal',
             color: 'white',
@@ -42,13 +42,20 @@ export default async function handler(req: NextRequest) {
             whiteSpace: 'pre-wrap',
           }}
         >
-			  {postTitle}
+			    {postTitle}
         </div>
       </div>
     ),
     {
       width: 1920,
       height: 1080,
+      fonts: [
+          {
+            name: 'Epilogue',
+            data: fontData,
+            style: 'normal',
+          },
+        ],
     }
   );
 }
