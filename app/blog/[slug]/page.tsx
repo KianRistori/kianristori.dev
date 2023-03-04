@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { createOgImage } from "../../../lib/createOgImage"
 import { allPosts } from "contentlayer/generated";
 import { Mdx } from "components/mdx";
 import Balancer from 'react-wrap-balancer'
@@ -12,6 +13,10 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }): Promise<Metadata | undefined> {
 	const post = allPosts.find((post) => post.slug === params.slug);
+	const ogImage = createOgImage({
+		title: post.title,
+		meta: ["kianristori.dev", post.publishedAt].join(" · "),
+	  })
 
 	if (!post) {
 		return;
@@ -21,12 +26,8 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 		title,
 		publishedAt: publishedTime,
 		summary: description,
-		image,
 		slug,
 	} = post;
-	const ogImage = image
-	? `https://kianristori.dev${image}`
-	: `https://kianristori.dev/api/og?title=${(title.replace(/ /g,"%20"))}`;
 
 	return {
 		title,
@@ -37,13 +38,7 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 			type: 'article',
 			publishedTime,
 			url: `https://kianristori.dev/blog/${slug}`,
-			images: [
-				{
-					url: ogImage,
-					width: 1200,
-					height: 627,
-				},
-			],
+			images: [ogImage],
 		},
 		twitter: {
 			card: 'summary_large_image',
