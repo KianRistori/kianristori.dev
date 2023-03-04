@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: 'Kian Ristori',
     images: [
       {
-        url: 'https://kianristori.dev/og.png',
+        url: 'https://kianristori.dev/og.webp',
         width: 1920,
         height: 1080,
       },

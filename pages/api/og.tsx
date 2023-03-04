@@ -25,7 +25,7 @@ export default async function handler(req: NextRequest) {
           flexDirection: 'column',
           alignItems: 'flex-start',
           justifyContent: 'center',
-          backgroundImage: 'url(https://kianristori.dev/og-bg.png)',
+          backgroundImage: 'url(https://kianristori.dev/og-bg.webp)',
         }}
       >
         <div
@@ -42,20 +42,20 @@ export default async function handler(req: NextRequest) {
             whiteSpace: 'pre-wrap',
           }}
         >
-			{postTitle}
+			  {postTitle}
         </div>
       </div>
     ),
     {
-      width: 1200,
-      height: 630,
-	  fonts: [
-        {
-          name: 'Epilogue',
-          data: fontData,
-          style: 'normal',
-        },
-      ],
+      width: 1920,
+      height: 1080,
+      fonts: [
+          {
+            name: 'Epilogue',
+            data: fontData,
+            style: 'normal',
+          },
+        ],
     }
   );
 }
