@@ -39,9 +39,7 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 			url: `https://kianristori.dev/blog/${slug}`,
 			images: [
 				{
-					url: ogImage,
-					width: 1600,
-					height: 836,
+					url: ogImage
 				},
 			],
 		},
@@ -57,7 +55,7 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 export default async function Blog({ params }) {
 	const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
 	return (
-		<div className="my-20 p-5 md:p-0">
+		<div className="md:my-20 p-5 md:p-0">
 			<h1 className="font-bold text-4xl font-epilogue mb-5">
 				<Balancer>{post.title}</Balancer>
 			</h1>
