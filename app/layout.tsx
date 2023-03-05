@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next';
 import localFont from '@next/font/local';
+import Navbar from 'components/Navbar';
 
 const epilogue = localFont({
   src: '../public/fonts/Epilogue-Medium.ttf',
@@ -54,7 +55,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={epilogue.variable}>
       <body className="w-full bg-[#111010] antialiased text-white">
-        <div className="mx-auto max-w-2xl selection:bg-violet-300 selection:text-black">
+        <div className="mx-auto max-w-2xl p-5 md:p-0 selection:bg-violet-300 selection:text-black">
+          <Navbar />
           {children}
         </div>
       </body>

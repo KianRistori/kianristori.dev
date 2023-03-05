@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
+import Head from 'next/head';
 import { createOgImage } from "../../../lib/createOgImage"
 import { allPosts } from "contentlayer/generated";
 import { Mdx } from "components/mdx";
 import Balancer from 'react-wrap-balancer'
 import ViewCounter from '../../../components/view-counter';
-import Head from 'next/head';
 
 export async function generateStaticParams() {
 	return allPosts.map((post) => ({
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 			images: [
 				{
 					url: ogImage,
-					secureUrl: ogImage,
+					alt: description,
 					width: 1600,
 					height: 863,
 				}
@@ -57,9 +57,16 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 
 export default function Blog({ params }) {
 	const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+	const ogImage = createOgImage({
+		title: post.title,
+		meta: ["kianristori.dev", post.publishedAt].join(" · "),
+	})
 	return (
-	<div className="md:my-20 p-5 md:p-0">
-		<h1 className="font-bold text-4xl font-epilogue mb-5">
+	<div className="md:my-20">
+		<head>
+			<meta property="og:image" content={ogImage} />
+		</head>
+		<h1 className="text-4xl font-epilogue mb-5">
 			<Balancer>{post.title}</Balancer>
 		</h1>
 		<div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 font-mono text-sm max-w-[650px]">

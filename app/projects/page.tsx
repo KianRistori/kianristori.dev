@@ -9,7 +9,7 @@ export const metadata = {
 export default async function Projects() {
 	const projects = await getProjects();
 	return (
-	<div className="p-5 md:py-32">
+	<div className="md:py-32">
 		<h1 className="font-bold text-4xl mb-5">Projects</h1>
 
 		<div className="flex flex-col space-y-5">

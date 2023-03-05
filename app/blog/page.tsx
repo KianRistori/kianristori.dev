@@ -10,7 +10,7 @@ export const metadata = {
 export default function BlogPage() {
 	allPosts.sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)));
 	return (
-		<div className="p-5 md:py-32">
+		<div className="md:py-10">
 			<h1 className="font-bold text-4xl mb-5">Blog</h1>
 			<div className="space-y-3">
 				{allPosts.map((post, i) =>
