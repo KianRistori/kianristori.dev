@@ -57,15 +57,8 @@ export async function generateMetadata({ params }): Promise<Metadata | undefined
 
 export default function Blog({ params }) {
 	const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-	const ogImage = createOgImage({
-		title: post.title,
-		meta: ["kianristori.dev", post.publishedAt].join(" · "),
-	})
 	return (
 	<div className="md:my-20">
-		<head>
-			<meta property="og:image" content={ogImage} />
-		</head>
 		<h1 className="text-4xl font-epilogue mb-5">
 			<Balancer>{post.title}</Balancer>
 		</h1>

@@ -11,7 +11,7 @@ export default function About() {
 	const timeline = Timeline['events'];
 
 	return (
-	<div className="md:py-20">
+	<div className="md:py-10">
 		<h1 className="font-bold text-4xl mb-5">About Me</h1>
 
 		<ol className="relative border-l border-gray-700">
