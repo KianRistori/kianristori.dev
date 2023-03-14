@@ -6,6 +6,8 @@ export const metadata = {
 	description: 'Read my thoughts on software development, design, and more.',
 };
 
+export const revalidate = 3600;
+
 export default async function Projects() {
 	const projects = await getProjects();
 	return (
