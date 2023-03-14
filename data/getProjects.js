@@ -8,7 +8,7 @@ export async function getProjects() {
 	const projects = [];
 	for (let i = 0; i < data.length; i++)
 	{
-		if(data[i].topics.includes("portfolio"))
+		if(data[i].topics.includes("portfolio") || data[i].topics.includes("42firenze"))
 			projects.push(data[i]);
 	}
 	return projects;
