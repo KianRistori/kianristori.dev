@@ -63,7 +63,7 @@ export default function Blog({ params }) {
 			<Balancer>{post.title}</Balancer>
 		</h1>
 		<div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 font-mono text-sm max-w-[650px]">
-			<div className="bg-neutral-800 rounded-md px-2 py-1 tracking-tighter">{post?.publishedAt}</div>
+			<div className="bg-neutral-800 rounded-md px-2 py-1 tracking-tighter">{post.publishedAt}</div>
 			<div className="h-[0.2em] bg-neutral-800 mx-2"></div>
 			<p className="font-mono text-sm text-neutral-500 tracking-tighter"><ViewCounter slug={post.slug} blogPage={true}></ViewCounter></p>
 		</div>

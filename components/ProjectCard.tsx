@@ -1,13 +1,13 @@
 export default function ProjectCard({title, description, topics, link, linkPage}) {
 	return (
-		<div className="grid w-full p-6 border rounded-lg shadow-md bg-transparent border-gray-700">
-			<h2 className="mb-2 text-2xl font-semibold tracking-tighttext-white">{title}</h2>
+		<div className="grid w-full py-5 shadow-md bg-transparent border-gray-700">
+			<h2 className="mb-2 text-xl font-light tracking-tighttext-white">{title}</h2>
 			<div className="flex flex-wrap">
 				{topics.map((topic, i) =>
 				(topic != "portfolio" ? <span key={i} className="text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-gray-700 text-gray-300 mb-2">{topic}</span> : null)
 				)}
 			</div>
-			<p className="mb-4 font-normal text-gray-400">{description}</p>
+			<p className="mb-4 text-md text-gray-400">{description}</p>
 			<div className="flex w-full self-end space-x-5">
 				<a href={link} className="w-full">
 					<button type="button" className="text-white w-full bg-[#24292F] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center focus:ring-gray-500 hover:bg-[#050708]/30 ">
