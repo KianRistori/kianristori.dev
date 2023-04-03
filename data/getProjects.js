@@ -4,14 +4,8 @@ export async function getProjects() {
 			Authorization: process.env.GITHUB_ACCESS_TOKEN,
 		},
 	});
-	const data = await res.json();
-	const projects = [];
-	for (let i = 0; i < data.length; i++)
-	{
-		if(data[i].topics.includes("portfolio") || data[i].topics.includes("42firenze"))
-			projects.push(data[i]);
-	}
+	const projects = await res.json();
+	projects.map((project, i) => project.topics.includes("portfolio") || project.topics.includes("42firenze") === true ? null : projects.splice(i, 1))
 	return projects;
 };
-
 export default getProjects;

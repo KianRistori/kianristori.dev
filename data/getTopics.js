@@ -1,16 +1,10 @@
-export function getTopics(data) {
+export function getTopics(projects) {
 	const topics = [];
-	for (let i = 0; i < data.length; i++)
-	{
-		for (let j = 0; j < data[i].topics.length; j++)
-		{
-			if (!topics.includes(data[i].topics[j]))
-			{
-				if (data[i].topics[j] != "portfolio")
-					topics.push(data[i].topics[j]);
-			}
-		}
-	}
+	projects.map((project) =>
+		project.topics.map((topic) =>
+			!topics.includes(topic) && topic != "portfolio" ? topics.push(topic) : null
+		)
+	)
 	return topics;
 };
 export default getTopics;
