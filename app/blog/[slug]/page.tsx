@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Head from 'next/head';
 import { createOgImage } from "../../../lib/createOgImage"
 import { allPosts } from "contentlayer/generated";
 import { Mdx } from "components/mdx";

@@ -8,7 +8,7 @@ export default function Home() {
         <Image className="rounded-full bg-gradient-to-tl from-gray-700/60 to-gray-400/60 shadow-lg p-[3px] ring-[5px] ring-gray-500/10" src="/logo.webp" alt="logo" height={100} width={100} priority></Image>
         <div>
           <h1 className="text-4xl font-epilogue">Kian Ristori</h1>
-          <p className="max-w-lg font-light text-lg">Student at <span className="font-bold">42Firenze</span></p>
+          <p className="max-w-lg font-light text-lg">Student at <a href="https://42firenze.it/" className="font-bold">42Firenze</a></p>
         </div>
       </div>
       <p className="my-10 font-light text-lg">I&apos;m passionate about web development. Welcome to my digital garden where I share what I&apos;m learning, becoming a better developer and growing a career in tech.</p>
