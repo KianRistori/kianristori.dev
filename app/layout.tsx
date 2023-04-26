@@ -21,13 +21,6 @@ export const metadata: Metadata = {
     description: 'Developer and creator.',
     url: 'https://kianristori.dev',
     siteName: 'Kian Ristori',
-    images: [
-      {
-        url: 'https://kianristori.dev/og.png',
-        width: 1920,
-        height: 1080,
-      },
-    ],
     locale: 'en-US',
     type: 'website',
   },
@@ -41,9 +34,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'aHtCrqNgsVHAh51tai7mHTkKsLaVum2evoEwfhpOdc0',
   },
 };
 

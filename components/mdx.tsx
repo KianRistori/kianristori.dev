@@ -2,7 +2,7 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 import Image from 'next/image';
 
 function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg mx-auto" {...props} />;
+  return <img alt={props.alt} className="rounded-lg mx-auto" {...props} />;
 }
 
 function Callout(props) {
@@ -15,7 +15,7 @@ function Callout(props) {
 }
 
 const components = {
-  Image: RoundedImage,
+  Img: RoundedImage,
   Callout,
 };
 
