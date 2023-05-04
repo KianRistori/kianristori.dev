@@ -1,15 +1,19 @@
 import { useMDXComponent } from 'next-contentlayer/hooks';
-import Image from 'next/image';
 
 function RoundedImage(props) {
-  return <img alt={props.alt} className="rounded-lg mx-auto" {...props} />;
+  return (
+    <div>
+      <img alt={props.alt} className="rounded-lg mx-auto" {...props} />
+      <p className="mt-2 text-sm text-center text-gray-400">{props.caption}</p>
+    </div>
+  );
 }
 
 function Callout(props) {
   return (
     <div className="flex bg-neutral-900 border border-neutral-800 rounded-lg p-4 my-8">
-      <div className="flex items-center w-4 mr-4">{props.emoji}</div>
-      <div className="w-full callout">{props.children}</div>
+      <div className="flex text-2xl items-center w-5 mr-5">{props.emoji}</div>
+      <div className="w-full">{props.children}</div>
     </div>
   );
 }

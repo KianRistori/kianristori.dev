@@ -1,6 +1,5 @@
 import getProjects from '../../data/getProjects';
 import getTopics from '../../data/getTopics';
-import ProjectCard from 'components/ProjectCard';
 import ProjectList from 'components/ProjectList';
 
 export const metadata = {

@@ -1,0 +1,59 @@
+---
+title: 'Update my Blog to NextJS 13'
+publishedAt: '2023-05-03'
+summary: 'Blog updated to NextJS 13 & redesigned UI/UX with ContentLayer, Next Font, Cloudinary API & Firebase view counter.'
+---
+
+## I guys
+
+In this days i have update my Blog to **NextJS 13** and redesign UI & UX.
+Before starting to code, I read the [official documentation](https://beta.nextjs.org/docs) and watched some YouTube tutorials.
+
+<Callout emoji={"🫶🏻"}>
+I have to tell you that I love <a href="https://leerob.io/">Leerob</a> and <a href="https://delba.dev/">Delba</a>'s blog websites.
+</Callout>
+
+I took a lot of inspiration from Lee's website, which is already updated to NextJS 13 and well-organized in terms of UI and UX.
+
+### Starting to structure the website
+
+First of all, I need to keep my **projects** always updated on the projects page.
+One of the best solutions I found was to use the **GitHub API**, since I keep all my projects there.
+
+By using a simple function, I am able to get an array with all the projects and sort
+them by the last modification date. The next step is to sort them based on the last push made, but it's not that simple.
+
+```js title="getProjects()" {2}
+const projects = await res.json();
+projects.map((project, i) => project.topics.includes("portfolio") || project.topics.includes("42firenze") === true ? null : projects.splice(i, 1))
+projects.sort((a, b) => new Date (b.updated_at) - new Date (a.updated_at));
+return projects;
+```
+
+With the **highlighted** code section, all I'm doing is removing the projects that don't
+have the "portfolio" or "42firenze" tag, which I don't want to display on my website.
+
+Furthermore, thanks to the topics in my repositories, I have been able to manage 
+the display of my projects based on their topic. So when the user clicks on a certain topic,
+the projects with that specific topic will be displayed. I have decided to use this UX experience
+only on PCs and tablets, since on smartphones, with their smaller screens, these buttons would take up too much space and the projects would not be visible.
+
+### ContentLayer
+
+To manage all of my articles, which are in [MDX](https://mdxjs.com/) format, I used a new method called [ContentLayer](https://www.contentlayer.dev/). After reading the documentation, I started writing some code, and I must say that ContentLayer is really cool. With minimal effort, I was able to automatically manage my articles using a simple `contentlayer.config.js` file, and also manage the Code Syntax Highlighter thanks to [rehypePrettyCode](https://rehype-pretty-code.netlify.app/).
+
+### Font
+
+To manage the custom font in the article titles, I used a new feature of NextJS called **Next Font**, which allowed me to load a local font and extend it using **tailwindcss**.
+
+### Open Graph Image
+
+I also managed to dynamically create **Open Graph Images** for each article, using the new functions of NextJS 13. To do this, I used the [Cloudinary](https://cloudinary.com/) **API**. I simply pass it the title of the article and it returns an OG Image for that specific article.
+
+<Img src="/images/og-Image-example.png" caption="Example of OG Image"/>
+
+### View Counter
+
+Finally, I added a **view counter** for each article, using a simple real-time database with [Firebase](https://firebase.google.com/). When the user clicks on an article, I use some APIs to add +1 to the corresponding article in my database, which has the same **slug** as my blog article, so I can recognize it.
+
+That's all for now. I'll keep you updated in case of any future changes.
