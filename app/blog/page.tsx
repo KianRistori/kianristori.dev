@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { allPosts } from 'contentlayer/generated';
-import ViewCounter from '../../components/view-counter';
 
 export const metadata = {
 	title: "Blog",
@@ -10,15 +9,15 @@ export const metadata = {
 export default function BlogPage() {
 	allPosts.sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)));
 	return (
-		<div className="md:py-10">
-			<h1 className="font-bold text-4xl mb-5">Blog</h1>
+		<div className="md:py-10 mb-40">
+			<h1 className="font-bold text-4xl mb-5 animate-in">Blog</h1>
 			<div className="space-y-3">
 				{allPosts.map((post, i) =>
-					<div key={i} className="">
+					<div key={i} className="animate-in" style={{ "--index": i + 1 } as React.CSSProperties}>
 						<div>
-							<Link className="font-light" href={`/blog/${post.slug}`}>{post.title}</Link>
+							<Link href={`/blog/${post.slug}`}>{post.title}</Link>
 						</div>
-						<p className="text-sm text-neutral-500 font-mono tracking-tighter"><ViewCounter slug={post.slug}/></p>
+						<p className="text-sm text-neutral-500 font-mono tracking-tighter">{post.publishedAt}</p>
 					</div>
 				)}
 			</div>
