@@ -31,6 +31,7 @@ export default function Home() {
         <Link href="/blog" className="">Blog</Link>
         <Link href="/projects" className="">Projects</Link>
         <Link href="/about" className="">About</Link>
+        <Link href="/guestbook" className="">Guestbook</Link>
       </div>
     </div>
   )

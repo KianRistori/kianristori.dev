@@ -3,7 +3,7 @@ import { allPosts } from 'contentlayer/generated';
 
 export const metadata = {
 	title: "Blog",
-	description: 'Read my thoughts on software development, design, and more.',
+	description: "Read my thoughts on software development, design, and more."
 };
 
 export default function BlogPage() {
@@ -17,7 +17,7 @@ export default function BlogPage() {
 						<div>
 							<Link href={`/blog/${post.slug}`}>{post.title}</Link>
 						</div>
-						<p className="text-sm text-neutral-500 font-mono tracking-tighter">{post.publishedAt}</p>
+						<p className="text-sm text-neutral-500 o tracking-tighter">{post.publishedAt}</p>
 					</div>
 				)}
 			</div>

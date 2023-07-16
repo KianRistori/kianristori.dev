@@ -77,7 +77,6 @@ export default function Blog(props: {params: ParamsProps}) {
 		<div className="grid grid-cols-[auto_1fr_auto] items-center mt-4 mb-8 font-mono text-sm max-w-[650px] animate-in" style={{ "--index": 1 } as React.CSSProperties}>
 			<div className="bg-neutral-800 rounded-md px-2 py-1 tracking-tighter">{post.publishedAt}</div>
 			<div className="h-[0.2em] bg-neutral-800 mx-2"></div>
-			{/* <p className="font-mono text-sm text-neutral-500 tracking-tighter"><ViewCounter slug={post.slug} blogPage={true}></ViewCounter></p> */}
 		</div>
 		<div className="animate-in" style={{ "--index": 2 } as React.CSSProperties}>
 			<Mdx code={post.body.code} />

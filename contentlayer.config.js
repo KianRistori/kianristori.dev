@@ -1,6 +1,8 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import rehypePrettyCode from "rehype-pretty-code"
 import { rehypePrettyCodeOptions } from "./lib/rehypePrettyCode"
+import toc from 'rehype-toc'
+import rehypeSlug from 'rehype-slug'
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -37,7 +39,9 @@ export default makeSource({
   documentTypes: [Post],
   mdx: {
     rehypePlugins: [
-      [rehypePrettyCode, rehypePrettyCodeOptions]
+      [rehypePrettyCode, rehypePrettyCodeOptions],
+      rehypeSlug,
+      [toc, {headings: ["h2", "h3"]}]
     ],
   },
 })

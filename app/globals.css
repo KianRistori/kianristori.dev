@@ -30,3 +30,7 @@ body::-webkit-scrollbar-thumb {
 .animate-in {
     animation-delay: calc(var(--index) * 130ms);
 }
+
+.toc {
+  @apply hidden md:block
+}
