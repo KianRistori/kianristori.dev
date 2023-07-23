@@ -8,7 +8,7 @@ export default function LoginGitHub(props: {session: any, user: any}) {
   const [message, setMessage] = useState("");
   const supabase = createClientComponentClient();
   const router = useRouter();
-
+  
   async function signInOauth() {
     await supabase.auth.signInWithOAuth({
       provider: 'github',
