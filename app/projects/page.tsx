@@ -14,7 +14,7 @@ export default async function Projects() {
 	const topics = getTopics(projects);
 	return (
 	<div className="md:pt-10 mb-40">
-		<h1 className="font-bold text-4xl mb-5 animate-in">Projects</h1>
+		<h1 className="font-bold text-4xl mb-5 animate-in">projects</h1>
 		<ProjectList
 			topics={topics}
 			projects={projects}

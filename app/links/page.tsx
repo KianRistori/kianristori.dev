@@ -3,7 +3,7 @@ import LinkList from "components/LinkList";
 
 export default function Links() {
   return (
-      <div className="flex flex-col gap-16 md:mt-20 mb-40">
+      <div className="flex flex-col gap-16 mb-40">
         <div className="flex flex-col gap-8 animate-in">
           <Image
             src={"/logo.webp"}

@@ -4,19 +4,14 @@ import { usePathname } from "next/navigation"
 
 export default function Navbar() {
 	const pathname = usePathname();
-	if (pathname != '/')
-	{
-		return (
+	return (
 		<div className="md:my-10 mb-10">
 			<div className="flex space-x-10 text-neutral-400">
-				<Link href="/">Home</Link>
-				<Link href="/blog">Blog</Link>
-				<Link href="/projects">Projects</Link>
-				<Link href="/about">About</Link>
-				<Link href="/guestbook" className="">Guestbook</Link>
+				{pathname === "/" ? <Link className="text-white" href="/">home</Link> : <Link href="/">home</Link>}
+				{pathname.includes("/blog") ? <Link className="text-white" href="/blog">blog</Link> : <Link href="/blog">blog</Link>}
+				{pathname === "/projects" ? <Link className="text-white" href="/projects">projects</Link> : <Link href="/projects">projects</Link>}
+				{pathname === "/guestbook" ? <Link  className="text-white" href="/guestbook">guestbook</Link> : <Link href="/guestbook">guestbook</Link>}
 			</div>
 		</div>
-		)
-	}
-	return ( null )
+	)
 }

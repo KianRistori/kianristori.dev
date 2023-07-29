@@ -70,7 +70,7 @@ export async function generateMetadata(props: { params: ParamsProps }): Promise<
 export default function Blog(props: {params: ParamsProps}) {
 	const post: PostProps = allPosts.find((post) => post._raw.flattenedPath === props.params.slug)!;
 	return (
-	<div className="md:my-20">
+	<div className="md:my-20 pb-40">
 		<h1 className="text-4xl font-epilogue mb-5 animate-in">
 			<Balancer>{post.title}</Balancer>
 		</h1>

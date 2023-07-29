@@ -13,7 +13,7 @@ export default async function Guestbook() {
   const { data: { user } } = await supabase.auth.getUser()
   const { data: messages } = await supabase.from('message').select()
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 md:pt-10 mb-40">
       <h1 className="font-bold text-3xl mb-5 animate-in">write something in my guestbook</h1>
       <LoginGitHub session={data.session} user={user}/>
       {messages?.sort((a, b) => b.id - a.id).map((message, i) => 
