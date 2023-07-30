@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { allPosts } from 'contentlayer/generated';
-import Link from 'next/link'
 import { FiArrowUpRight } from "react-icons/fi";
 import LinkButton from 'components/LinkButton';
 import getAge from 'data/getAge'
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="md:pt-10 pb-40">
 		  <h1 className="font-bold text-2xl mb-5 animate-in">hy, I&apos;m Kian</h1>
-      <p className="text-gray-200 font-normal animate-in" style={{ "--index": 1 } as React.CSSProperties}>I&apos;m a {getAge()} year old guy diving deep into the world of programming. Follow my journey as I study at <LinkButton img="/42Logo.png" name="42 Firenze" link="https://42firenze.it/"/> and share my experiences with you. Let&apos;s embark on this tech adventure together! 🚀</p>
+      <p className="text-gray-200 font-normal animate-in" style={{ "--index": 1 } as React.CSSProperties}>I&apos;m a {getAge()} year old guy diving deep into the world of programming. Follow my journey as I study at <LinkButton img="/42Logo.png" name="42 Firenze" link="https://42firenze.it/" alt="42 Firenze Logo"/> and share my experiences with you. Let&apos;s embark on this tech adventure together! 🚀</p>
       <div className="grid md:grid-cols-4 grid-cols-2 items-center my-10 animate-in-reverse" style={{ "--index": 2 } as React.CSSProperties}>
         <img className="z-40 rounded-lg -rotate-3 hover:scale-110 transition duration-200" src="/logo.webp" alt="My best photo" />
         <img className="rounded-lg object-cover hover:z-40 rotate-3 hover:scale-110 transition duration-200" src="/images/home/photo2.webp" alt="My badge at 42Firenze" />
