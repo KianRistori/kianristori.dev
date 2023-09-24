@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { allPosts } from 'contentlayer/generated';
+import FilterBlogPost from 'components/FilterBlogPost';
 
 export const metadata = {
 	title: "Blog",
@@ -11,16 +12,7 @@ export default function BlogPage() {
 	return (
 		<div className="md:py-10 mb-40">
 			<h1 className="font-bold text-4xl mb-5 animate-in">blog</h1>
-			<div className="space-y-3">
-				{allPosts.map((post, i) =>
-					<div key={i} className="animate-in" style={{ "--index": i + 1 } as React.CSSProperties}>
-						<div>
-							<Link href={`/blog/${post.slug}`}>{post.title}</Link>
-						</div>
-						<p className="text-sm text-gray-300">{post.publishedAt}</p>
-					</div>
-				)}
-			</div>
+			<FilterBlogPost allPost={allPosts}/>
 		</div>
 	);
   }
