@@ -10,7 +10,6 @@ export default function Navbar() {
 				{pathname === "/" ? <Link className="text-white" href="/">home</Link> : <Link href="/">home</Link>}
 				{pathname.includes("/blog") ? <Link className="text-white" href="/blog">blog</Link> : <Link href="/blog">blog</Link>}
 				{pathname === "/projects" ? <Link className="text-white" href="/projects">projects</Link> : <Link href="/projects">projects</Link>}
-				{pathname === "/guestbook" ? <Link  className="text-white" href="/guestbook">guestbook</Link> : <Link href="/guestbook">guestbook</Link>}
 			</div>
 		</div>
 	)
