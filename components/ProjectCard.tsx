@@ -7,7 +7,7 @@ export default function ProjectCard(props: {title: string, description: string, 
 			<h1 className="mb-2 text-xl text-white">{props.title}</h1>
 			<div className="flex flex-wrap">
 				{props.topics.map((topic, i) =>
-				(topic != "portfolio" ? <span key={i} className="text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-gray-700 text-gray-300 mb-2">{topic}</span> : null)
+					(topic != "portfolio" ? <span key={i} className="text-xs font-medium mr-2 px-2.5 py-0.5 rounded bg-gray-700 text-gray-300 mb-2">{topic}</span> : null)
 				)}
 			</div>
 			<p className="mb-4 text-md text-gray-400">{props.description}</p>
